@@ -1,0 +1,70 @@
+.builder-container{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    gap: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.builder-container > div{
+    flex: 1;
+    border: 1px solid black;
+   
+}
+
+.builder-container .fields-wrapper{
+    display: flex;
+}
+.builder-container .fields-wrapper .button-wrapper{
+    flex: 1;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    padding: 5px;
+}
+.builder-container .fields-wrapper .button-wrapper > button{
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid black;
+    /* margin: 0px 2px; */
+}
+
+.builder-container .fields-wrapper .input-wrapper{
+    flex: 4;
+    
+   
+}
+.button-link.active-link{
+    background-color: black !important;
+    color: white
+}
+.builder-container .fields-wrapper input::placeholder,textarea::placeholder{
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+.builder-container .fields-wrapper input,textarea, select{
+    padding: 5px;
+}
+
+.basic-info-wrapper{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-info-wrapper hr{
+    margin: 10px 60px;
+    border: 2px solid black;
+    color: black
+}
+.education-info-wrapper .education-item{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+   
+}

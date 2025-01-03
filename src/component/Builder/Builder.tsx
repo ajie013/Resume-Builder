@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 import './styles/Builder.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import jsPDF from 'jspdf';
@@ -49,6 +49,7 @@ const Builder: React.FC = () => {
     const [experienceList, setExperienceList] = useState<ExperienceType[]>([
         { id: 1, company: "", position: "", startDate: "", endDate: "", jobDescription: "" }
     ]);
+    
     const [skills, setSkills] = useState<string[]>(['']);
     const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);

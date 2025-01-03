@@ -1,0 +1,25 @@
+.skills-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+   
+}
+.skills-info-wrapper .skill-item{
+    display: flex;
+    position: relative;
+}
+
+.skills-info-wrapper .skill-item .close-button-skill{
+    border: none;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+.skills-info-wrapper .skill-item .close-button-skill:hover{
+    color: red;
+   
+}
+
+.skills-info-wrapper input{
+    width: 100%;
+} 

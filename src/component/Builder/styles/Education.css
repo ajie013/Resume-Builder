@@ -1,0 +1,31 @@
+.builder-container .education-info-wrapper {
+    padding: 5px;
+}
+
+.builder-container .education-info-wrapper .education-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    margin: 15px 0px;
+}
+
+.education-info-wrapper .education-item .close-button-education{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: -27px;
+    right: -5px;
+    transition: 0.3s ease-in-out;
+}
+
+.education-info-wrapper .education-item .close-button-education:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+.education-info-wrapper .duration{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

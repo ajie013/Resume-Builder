@@ -2,31 +2,23 @@
     --black: #212529
 }
 
-
 .builder-container{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid var(-- var(--black));
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+    
 }
-
 
 .builder-container .main{
     display: flex;
-    /* width: 50%;
-    padding: 20px; */
     flex-direction: column;
- 
     border-radius: 5px;
     border: 1px solid black;
-    /* min-height: 380px; */
     opacity: 0; 
     max-width: 600px;
     width: 100%;
@@ -34,7 +26,6 @@
     transform: translateY(20px);
     animation: fadeInUp 3s forwards; 
 }
-
 
 @keyframes fadeInUp {
     to {
@@ -60,7 +51,7 @@
     background-color: white;
     border: none;
     border-radius: 3px;
-    border: 1px solid  var(--black);
+    border: 1px solid  black;
 }
 
 .builder-container .main .fields-wrapper{
@@ -90,16 +81,16 @@
     }
 }
 .button-link.active-link{
-    background-color: var(--black) !important;
+    background-color:black !important;
     color: white
 }
 
-/* Placeholder  */
 input::placeholder,textarea::placeholder{
     letter-spacing: 2px;
     font-weight: lighter;
     font-size: 0.9rem;
 }
+
  input, textarea{
     padding: 5px;
     width: 100%;
@@ -108,119 +99,6 @@ input::placeholder,textarea::placeholder{
 textarea{
     min-height: 70px;
 }
-
-
-.builder-container .basic-info-wrapper{
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-   padding: 5px;
-}
-
-.builder-container .education-info-wrapper {
-    padding: 5px;
-    
- 
-}
-.builder-container .education-info-wrapper .education-item{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: relative;
-    margin: 15px 0px;
- 
-   
-}
-.education-info-wrapper .education-item .close-button-education{
-    border: none;
-    background-color: transparent;
-
-    position: absolute;
-    top: -27px;
-    right: -5px;
-    transition: 0.3s ease-in-out;
-}
-.education-info-wrapper .education-item .close-button-education:hover{
-    color: red;
-    transform: scale(1.2);
-}
-
-.education-info-wrapper .duration{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-
-.experience-info-wrapper .experience-item{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-  
-
-    position: relative;
-  
-}
-.experience-info-wrapper .experience-header{
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-.experience-info-wrapper .duration{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.experience-info-wrapper .experience-item .close-button-experience{
-   
-
-    position: absolute;
-    top: -27px;
-    right: -5px;
-    transition: 0.3s ease-in-out;
-}
-.experience-info-wrapper .experience-item .close-button-experience:hover{
-    color: red;
-    transform: scale(1.2);
-}
-
-
-.experience-info-wrapper .experience-header .no-experience-wrapper{
-    display: flex;
-    text-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-right: 5px;
-}
-
-.skills-info-wrapper{
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    gap: 5px;
-   
-}
-.skills-info-wrapper .skill-item{
-    display: flex;
-    position: relative;
-}
-
-.skills-info-wrapper .skill-item .close-button-skill{
-    border: none;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
-}
-.skills-info-wrapper .skill-item .close-button-skill:hover{
-    color: red;
-   
-}
-
-.skills-info-wrapper input{
-    width: 100%;
-} 
 
 /* MODAL */
 .modal-overlay {
@@ -243,16 +121,17 @@ textarea{
     max-height: 420px;
     position: relative;
 }
+
 .modal-content iframe{
     width: 100%;
-   
-   
 }
+
 .download-pdf-btn{
     position: absolute;
     bottom: 10px;
     border: none;
 }
+
 .close-button-modal {
     position: absolute;
     top: 0px;
@@ -262,7 +141,6 @@ textarea{
     font-size: 20px;
     cursor: pointer;
 }
-
 
 .loader-modal {
     width: 25px;
@@ -278,7 +156,6 @@ textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
 }
 
 @keyframes rotation {

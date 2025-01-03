@@ -1,0 +1,43 @@
+.experience-info-wrapper .experience-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+  
+
+    position: relative;
+  
+}
+.experience-info-wrapper .experience-header{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.experience-info-wrapper .duration{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.experience-info-wrapper .experience-item .close-button-experience{
+   
+
+    position: absolute;
+    top: -27px;
+    right: -5px;
+    transition: 0.3s ease-in-out;
+}
+.experience-info-wrapper .experience-item .close-button-experience:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+
+.experience-info-wrapper .experience-header .no-experience-wrapper{
+    display: flex;
+    text-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
+}

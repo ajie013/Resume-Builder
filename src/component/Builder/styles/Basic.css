@@ -1,0 +1,8 @@
+
+.builder-container .basic-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+ }
+ 

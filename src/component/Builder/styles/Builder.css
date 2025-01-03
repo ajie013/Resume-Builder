@@ -1,76 +1,148 @@
 :root{
     --black: #212529
-};
+}
+
+
 .builder-container{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     width: 100%;
     border: 1px solid var(-- var(--black));
     display: flex;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+  
 }
 
 
-.builder-container > div{
-    flex: 1;
-    border: 1px solid  var(--black);
-   
-}
-
-.builder-container .fields-wrapper{
+.builder-container .main{
     display: flex;
+    /* width: 50%;
+    padding: 20px; */
+    flex-direction: column;
+ 
+    border-radius: 5px;
+    border: 1px solid black;
+    /* min-height: 380px; */
+    opacity: 0; 
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+    transform: translateY(20px);
+    animation: fadeInUp 3s forwards; 
 }
-.builder-container .fields-wrapper .button-wrapper{
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.builder-container .main .button-wrapper{
     flex: 1;
     display: flex;
     gap: 2px;
-    flex-direction: column;
     padding: 5px;
+
+    justify-content: center;
+    align-items: center;
+   
+  
 }
-.builder-container .fields-wrapper .button-wrapper > button{
-    padding: 10px;
+.builder-container .main .button-wrapper > button{
+    padding: 8px 10px;
     cursor: pointer;
     background-color: white;
     border: none;
     border-radius: 3px;
     border: 1px solid  var(--black);
-    /* margin: 0px 2px; */
 }
 
-.builder-container .fields-wrapper .input-wrapper{
-    flex: 4;
+.builder-container .main .fields-wrapper{
+  
+    text-align: center;
     
-   
+}
+
+@media screen and (min-width: 520px){
+    .builder-container .main{
+        padding: 10px;
+        flex-direction: row;
+      
+    }
+    .builder-container .main .button-wrapper{
+        flex: 1;
+        display: flex;
+        justify-content:start;
+        flex-direction: column;
+       
+    }
+    .builder-container .main .button-wrapper > button{
+        width: 100%;
+    }
+    .builder-container .main .fields-wrapper{
+        flex: 4;
+    }
 }
 .button-link.active-link{
     background-color: var(--black) !important;
     color: white
 }
-.builder-container .fields-wrapper input::placeholder,textarea::placeholder{
+
+/* Placeholder  */
+input::placeholder,textarea::placeholder{
     letter-spacing: 2px;
     font-weight: lighter;
     font-size: 0.9rem;
 }
-.builder-container .fields-wrapper input,textarea{
+ input, textarea{
     padding: 5px;
     width: 100%;
 }
+
 textarea{
     min-height: 70px;
 }
-.builder-container select{
-    padding: 7px;
+
+
+.builder-container .basic-info-wrapper{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   padding: 5px;
 }
 
-.basic-info-wrapper{
+.builder-container .education-info-wrapper {
     padding: 5px;
-    display: flex;
-    flex-direction: column;
+    
+ 
 }
-.education-info-wrapper{
+.builder-container .education-info-wrapper .education-item{
     display: flex;
-    padding: 5px;
     flex-direction: column;
+    gap: 5px;
+    position: relative;
+    margin: 15px 0px;
+ 
+   
+}
+.education-info-wrapper .education-item .close-button-education{
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
+    top: -27px;
+    right: -5px;
+    transition: 0.3s ease-in-out;
+}
+.education-info-wrapper .education-item .close-button-education:hover{
+    color: red;
+    transform: scale(1.2);
 }
 
 .education-info-wrapper .duration{
@@ -78,35 +150,90 @@ textarea{
     justify-content: center;
     gap: 10px;
 }
-.education-info-wrapper .duration > div{
-    flex: 1;
+
+
+.experience-info-wrapper .experience-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+  
+
+    position: relative;
+  
 }
-
-
-.experience-info-wrapper input{
-    width: 100%;
-    margin: 5px 0px;
+.experience-info-wrapper .experience-header{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 .experience-info-wrapper .duration{
     display: flex;
     justify-content: center;
     gap: 10px;
-   
 }
-.experience-info-wrapper .duration > div{
-    flex: 1;
+
+.experience-info-wrapper .experience-item .close-button-experience{
+   
+
+    position: absolute;
+    top: -27px;
+    right: -5px;
+    transition: 0.3s ease-in-out;
+}
+.experience-info-wrapper .experience-item .close-button-experience:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+
+.experience-info-wrapper .experience-header .no-experience-wrapper{
+    display: flex;
+    text-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
 }
 
 .skills-info-wrapper{
     display: flex;
     flex-direction: column;
     padding: 5px;
+    gap: 5px;
+   
+}
+.skills-info-wrapper .skill-item{
+    display: flex;
+    position: relative;
+}
+
+.skills-info-wrapper .skill-item .close-button-skill{
+    border: none;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+.skills-info-wrapper .skill-item .close-button-skill:hover{
+    color: red;
+   
 }
 
 .skills-info-wrapper input{
     width: 100%;
-    margin: 5px 0px;
-}
+} 
+/* @media screen and (min-width: 520px){
+    .skills-info-wrapper .skill-item .close-button-skill{
+       
+        position: absolute; 
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%); 
+       
+    }
+} */
+
+
+/* MODAL */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -119,22 +246,58 @@ textarea{
     align-items: center;
 }
 
-.modal-content {
-    background: white;
+.modal-overlay  .modal-content {
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 800px;
+    /* max-width: 800px; */
+    height: 480px;
     position: relative;
 }
-
-.close-button {
+.modal-content iframe{
+    width: 100%;
+   
+    min-height: 450px; 
+}
+.download-pdf-btn{
     position: absolute;
-    top: 10px;
-    right: 10px;
+    bottom: 10px;
+    border: none;
+}
+.close-button-modal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
 }
 
+
+.loader-modal {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #c2c0c0;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

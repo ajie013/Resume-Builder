@@ -221,17 +221,6 @@ textarea{
 .skills-info-wrapper input{
     width: 100%;
 } 
-/* @media screen and (min-width: 520px){
-    .skills-info-wrapper .skill-item .close-button-skill{
-       
-        position: absolute; 
-        right: -25px;
-        top: 50%;
-        transform: translateY(-50%); 
-       
-    }
-} */
-
 
 /* MODAL */
 .modal-overlay {
@@ -251,14 +240,13 @@ textarea{
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    /* max-width: 800px; */
-    height: 480px;
+    max-height: 420px;
     position: relative;
 }
 .modal-content iframe{
     width: 100%;
    
-    min-height: 450px; 
+   
 }
 .download-pdf-btn{
     position: absolute;

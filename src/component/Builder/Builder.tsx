@@ -3,7 +3,6 @@ import './styles/Builder.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import jsPDF from 'jspdf';
 import { popUpMessage } from '../../utils/popUpMessage';
-import { faL } from '@fortawesome/free-solid-svg-icons/faL';
 
 
 
